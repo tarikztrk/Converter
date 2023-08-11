@@ -28,7 +28,7 @@ namespace Converter.Controllers
         [HttpGet("RGB2CMYKConversion")]
         public async Task<CMYK> ConvertRGB2CMYK([FromQuery] RGB colorInfo)
         {
-            return await _converter.ConvertCMYKToRGB(colorInfo);
+            return await _converter.ConvertRGBToCMYK(colorInfo);
         }
 
 
