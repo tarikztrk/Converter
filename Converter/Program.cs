@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IBinaryDecimalConverter, BinaryDecimalConverter>();
+builder.Services.AddScoped<IColorConverter, ColorConverter>();
 
 var app = builder.Build();
 

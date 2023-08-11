@@ -6,12 +6,12 @@ namespace Converter.Controllers
 
     [Route("/")]
     [ApiController]
-    public class Binary2DecimalController : ControllerBase
+    public class NumberConversionController : ControllerBase
     {
-        private readonly ILogger<Binary2DecimalController> _logger;
+        private readonly ILogger<NumberConversionController> _logger;
         private readonly IBinaryDecimalConverter _converter;
 
-        public Binary2DecimalController(ILogger<Binary2DecimalController> logger, IBinaryDecimalConverter converter)
+        public NumberConversionController(ILogger<NumberConversionController> logger, IBinaryDecimalConverter converter)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _converter = converter ?? throw new ArgumentNullException(nameof(converter));
