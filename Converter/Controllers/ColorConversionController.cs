@@ -31,6 +31,12 @@ namespace Converter.Controllers
             return await _converter.ConvertRGBToCMYK(colorInfo);
         }
 
+        [HttpGet("Hexadecimal2RGBConversion")]
+        public async Task<RGB> ConvertHexadecimal2RGB([FromQuery] Hexadecimal hex)
+        {
+            return await _converter.ConvertHexadecimalToRgb(hex);
+        }
+
 
     }
 }
